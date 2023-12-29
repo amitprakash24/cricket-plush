@@ -10,18 +10,17 @@ export class ApiCallService {
   constructor(private _httpClient:HttpClient) { }
 // all backend create method declear need to call here to perform operation   
 
-
     getAllMatches()
     {
-      return this._httpClient.get(`${environment.apiUrl}/matches`)
+      return this._httpClient.get(`${environment.apiUrl}/match`)
     }
     getLiveMatches()
     {
-      return this._httpClient.get(`${environment.apiUrl}/matches/live`)
+      return this._httpClient.get(`${environment.apiUrl}/match/live`)
     }
     getPointTables()
     {
-      return this._httpClient.get(`${environment.apiUrl}/matches/point-table`)
+      return this._httpClient.get(`${environment.apiUrl}/match/point-table`)
     }
   }
 
